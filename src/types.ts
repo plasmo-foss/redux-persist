@@ -149,6 +149,7 @@ export interface Persistor {
   pause(): void;
   persist(): void;
   purge(): Promise<any>;
+  resync(): Promise<void>
   flush(): Promise<any>;
   dispatch(action: PersistorAction): PersistorAction;
   getState(): PersistorState;
